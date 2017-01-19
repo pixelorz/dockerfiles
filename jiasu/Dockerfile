@@ -6,5 +6,7 @@ RUN set -ex \
 #ADD config.json /config.json
 #EXPOSE your_port	
 ENTRYPOINT ["/usr/bin/ssserver"]
+#ENTRYPOINT ["ssserver", "-c", "/config.json"]
+
 # usage:
 # docker run -d --restart=always -p 443:443 index.docker.io/user/project:tag -s 0.0.0.0 -p 443 -k $PD -m chacha20
